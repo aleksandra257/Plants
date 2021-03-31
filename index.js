@@ -1,32 +1,17 @@
-var slideIndex = 1;
-showSlides(slideIndex);
+const slider = document.querySelector(".slider");
+const before = document.querySelector(".img-container-before");
+const after = document.querySelector(".img-container-after");
+const container = document.querySelector(".container");
 
-// Next/previous controls
-function plusSlides(n) {
-  showSlides((slideIndex += n));
-}
+const drag = (event) => {
+  let xPos = event.layerX;
+  before.style.width = xPos + "px";
+  slider.style.left = xPos + "px";
 
-// Thumbnail image controls
-function currentSlide(n) {
-  showSlides((slideIndex = n));
-}
+  if (xPos < 50) {
+    before.style.width = 0;
+    slider.style.left = 0;
+  }
+};
 
-function showSlides(n) {
-  var i;
-  var slides = document.getElementsByClassName("fadeSlides");
-  var dots = document.getElementsByClassName("dot");
-  if (n > slides.length) {
-    slideIndex = 1;
-  }
-  if (n < 1) {
-    slideIndex = slides.length;
-  }
-  for (i = 0; i < slides.length; i++) {
-    slides[i].style.display = "none";
-  }
-  for (i = 0; i < dots.length; i++) {
-    dots[i].className = dots[i].className.replace(" active", "");
-  }
-  slides[slideIndex - 1].style.display = "block";
-  dots[slideIndex - 1].className += " active";
-}
+container.addEventListener("mousemove", drag);

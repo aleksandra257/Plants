@@ -1,0 +1,11 @@
+.carousel-container {
+  display: flex;
+  margin: 0 auto;
+}
+.carousel-container img {
+  max-width: 60rem;
+}
+
+.carousel-slide {
+  display: flex;
+}

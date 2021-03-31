@@ -1,115 +1,120 @@
-body{
-    overflow-x: hidden;
-    overflow-y: scroll;
-    background-color: #e5fff9;
-    font-family: Garamond;
+body {
+  overflow-x: hidden;
+  overflow-y: scroll;
+  background-color: #e5fff9;
+  font-family: Garamond;
 }
 
-h1{
-    font-size: 50px;
+h1 {
+  font-size: 50px;
 }
 
-.headline{
-    text-align: left;
-    flex-direction: row;
- 
-} 
+.headline {
+  text-align: left;
+  flex-direction: row;
+}
 
-.headline-pic{
-    height: 150px;
-    width: 150px;
-    float: left;
-    margin-top: 0%;
-    margin-left: 0%;
-    padding: 25px;
+.headline-pic {
+  height: 150px;
+  width: 150px;
+  float: left;
+  margin-top: 0%;
+  margin-left: 0%;
+  padding: 25px;
+  object-fit: contain;
 }
 
 .nav-bar {
-
-background-color: #40826D;
-    margin-top: 0%;
-    margin-left: 0%;
-    margin-right: 0%;
-    padding: 2%;
-    text-align: center;
-    font-size: 20px;
+  background-color: #40826d;
+  margin-top: 0%;
+  margin-left: 0%;
+  margin-right: 0%;
+  padding: 2%;
+  text-align: center;
+  font-size: 20px;
 }
 
-.custom-link{
-    color: seashell;
-    opacity: 1;
-}
- 
-h2{ 
-    font-size: 40px;
+.custom-link {
+  color: seashell;
+  opacity: 1;
 }
 
-.p-wrapper{
+h2 {
+  font-size: 40px;
+  padding-left: 5rem;
+}
+
+.p-wrapper {
+  display: flex;
+  justify-content: center;
+  flex-direction: row;
+  padding-left: 5rem;
+}
+
+.custom-link:hover {
+  color: black;
+  opacity: 0.5;
+}
+
+.container-img {
+  max-width: 50%;
+  position: relative;
+  text-align: center;
+  color: white;
+}
+
+.click-here-img {
+  opacity: 1;
+  height: 30rem;
+  width: 60rem;
+  object-fit: contain;
+}
+.bottom-right {
+  position: absolute;
+  bottom: 8px;
+  right: 16px;
+}
+.pic-txt {
+  position: absolute;
+  top: 300px;
+  left: 0;
+  width: 100%;
+  color: seagreen;
+}
+/* media queries */
+@media screen and (max-width: 1024px) {
+  .p-wrapper {
     display: flex;
-    justify-content: center;
-    flex-direction: row;
-}
-
- .custom-link:hover{
-    color: black;
-    opacity: 0.5;
-    }
-
-    img{
-
+    flex-direction: column;
+  }
+  .container-img {
+    position: relative;
+    text-align: center;
+    color: white;
+    display: flex;
     opacity: 1;
     height: 30rem;
     width: 60rem;
     object-fit: contain;
+  }
 }
 
-    @media screen and (max-width: 1024px) {
-        .p-wrapper {
-           display: flex;
-           flex-direction: column;
-        }
-        .container-img {
-            position: relative;
-        text-align: center;
-        color: white;
-        display: flex;
-        }
-      }
-      .bottom-right {
-        position: absolute;
-        bottom: 8px;
-        right: 16px;
-      }
-
-      .container-img {
-        position: relative;
-        text-align: center;
-        color: white;
-      }
-      .pic-txt { 
-        position: absolute; 
-        top: 300px; 
-        left: 0; 
-        width: 100%; 
-        color: seagreen;
-     }
-
-     .slideshow-container {
-        max-width: 2000px;
-        position: relative;
-        margin-top: 100px;
-        margin-left: 25%;
-        margin-right: 25%;
-     }
-
-     .fade-slides {
-        display: none;
-      }
-     /* On hover, add a black background color with a little bit see-through */
-.prev:hover, .next:hover {
-  background-color: rgba(0,0,0,0.8);
+.slideshow-container {
+  max-width: 2000px;
+  position: relative;
+  margin-top: 100px;
+  margin-left: 25%;
+  margin-right: 25%;
 }
 
+.fade-slides {
+  display: none;
+}
+/* On hover, add a black background color with a little bit see-through */
+.prev:hover,
+.next:hover {
+  background-color: rgba(0, 0, 0, 0.8);
+}
 
 /* The dots/bullets/indicators */
 .dot {
@@ -123,53 +128,44 @@ h2{
   transition: background-color 0.6s ease;
 }
 
-.active, .dot:hover {
+.active,
+.dot:hover {
   background-color: #717171;
 }
-
-/* Fading animation */
-.fade {
-  -webkit-animation-name: fade;
-  -webkit-animation-duration: 1.5s;
-  animation-name: fade;
-  animation-duration: 1.5s;
+*/ .container {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  position: relative;
+  width: 100vw;
+  height: 50vh;
 }
-
-@-webkit-keyframes fade {
-  from {opacity: .4}
-  to {opacity: 1}
-}
-
-@keyframes fade {
-  from {opacity: .4}
-  to {opacity: 1}
-}
-
-.container {
-margin: 0;
-padding: 0;
-box-sizing: border-box;
-position: relative;
-width: 100vw;
-height: 50vh;
-}
-
-
 
 .container img {
-    width: 100vw;
-    height: 50vh;
-
+  width: 100vw;
+  height: 50vh;
+  object-fit: contain;
 }
 
 .img-container-before,
 .img-container-after {
-    position: absolute;
-    width: 100vw;
-    height: 50vh;
+  position: absolute;
+  width: 100vw;
+  height: 50vh;
 }
 
-.img-container-before{
-    width: 35vw;
-    overflow: hidden;
+.img-container-before {
+  width: 50vw;
+  overflow: hidden;
 }
+
+/* .slider {
+  width: 0.5rem;
+  background-color: #e5fff9;
+  height: 100%;
+  z-index: 10;
+  position: absolute;
+  left: 50%;
+  transform: translate(-50%, 0%);
+  pointer-events: none;
+} */
