@@ -2,7 +2,8 @@ body {
   overflow-x: hidden;
   overflow-y: scroll;
   background-color: #e5fff9;
-  font-family: Garamond;
+  font-family: "Kiwi Maru", serif !important;
+  padding-right: 1rem;
 }
 
 h1 {
@@ -66,7 +67,7 @@ h2 {
 .click-here-img {
   opacity: 1;
   height: 30rem;
-  width: 60rem;
+  width: 50rem;
   object-fit: contain;
 }
 .bottom-right {
@@ -82,10 +83,11 @@ h2 {
   color: seagreen;
 }
 /* media queries */
-@media screen and (max-width: 1024px) {
+@media screen and (max-width: 1440px) {
   .p-wrapper {
     display: flex;
     flex-direction: column;
+    overflow-x: hidden;
   }
   .container-img {
     position: relative;
@@ -96,6 +98,22 @@ h2 {
     height: 30rem;
     width: 60rem;
     object-fit: contain;
+    overflow: hidden;
+  }
+}
+
+@media screen and (max-width: 700px) {
+  .click-here-img {
+    width: 400px !important;
+  }
+  .img-container-before {
+    width: 400px !important;
+  }
+}
+
+@media screen and (max-width: 1024px) {
+  body {
+    overflow-x: hidden;
   }
 }
 
@@ -132,29 +150,31 @@ h2 {
 .dot:hover {
   background-color: #717171;
 }
-*/ .container {
-  margin: 0;
-  padding: 0;
+
+#evergreen .container-evergreen {
+  margin-bottom: 30rem;
+  /* margin: 0; */
+  /* padding: 0; */
   box-sizing: border-box;
   position: relative;
   width: 100vw;
   height: 50vh;
 }
 
-.container img {
+#evergreen .container-evergreen img {
   width: 100vw;
   height: 50vh;
   object-fit: contain;
 }
 
-.img-container-before,
+#evergreen .container-evergreen .img-container-before,
 .img-container-after {
   position: absolute;
   width: 100vw;
   height: 50vh;
 }
 
-.img-container-before {
+#evergreen .container-evergreen .img-container-before {
   width: 50vw;
   overflow: hidden;
 }

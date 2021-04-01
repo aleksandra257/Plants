@@ -1,11 +1,10 @@
-.carousel-container {
-  display: flex;
-  margin: 0 auto;
-}
-.carousel-container img {
-  max-width: 60rem;
+.mySlides {
+  margin: auto;
 }
 
-.carousel-slide {
-  display: flex;
+@media screen and (max-width: 800px);
+ {
+  .slider {
+    width: 200px;
+  }
 }
